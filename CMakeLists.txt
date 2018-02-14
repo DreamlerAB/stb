@@ -48,25 +48,24 @@ write_basic_package_version_file(
     VERSION "${STB_IMAGE_VERSION}"
     COMPATIBILITY AnyNewerVersion
 )
-configure_file("${CMAKE_SOURCE_DIR}/cmake/STBImageConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/STBImageConfig.cmake"
-    COPYONLY
-)
+#configure_file("${CMAKE_SOURCE_DIR}/cmake/STBImageConfig.cmake"
+#    "${CMAKE_CURRENT_BINARY_DIR}/STBImageConfig.cmake"
+#    COPYONLY
+#)
 
-install(
-    FILES
-    cmake/STBImageConfig.cmake
-    "${CMAKE_CURRENT_BINARY_DIR}/STBImageConfigVersion.cmake"
-    DESTINATION lib/cmake
-    COMPONENT Devel
-)
+#install(
+#    FILES
+#    cmake/STBImageConfig.cmake
+#    "${CMAKE_CURRENT_BINARY_DIR}/STBImageConfigVersion.cmake"
+#    DESTINATION lib/cmake
+#    COMPONENT Devel
+#)
 
-install(
-    FILES
-    cmake/STBImageIncludes.cmake
-    DESTINATION lib/cmake
-    COMPONENT Devel
-)
+#install(
+#    FILES
+#    DESTINATION lib/cmake
+#    COMPONENT Devel
+#)
 # Create cmake files for import
 
 include(CPack)
